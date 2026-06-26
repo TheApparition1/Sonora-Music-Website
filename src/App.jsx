@@ -1,6 +1,7 @@
 import React from 'react';
 import SoftAurora from './components/SoftAurora';
 import { Zap, Lock, Cpu} from "lucide-react";
+import AnimatedContent from './components/AnimatedContent';
 
 function App() {
     return (
@@ -54,10 +55,9 @@ function App() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                justifyContent: 'flex-start',
-                paddingTop: '260px',
+                justifyContent: 'center',
+                minHeight: '70vh',
                 padding: '24px',
-                overflow: 'hidden',
                 textAlign: 'center'
             }}>
                 <h1 style={{
@@ -65,7 +65,8 @@ function App() {
                     fontWeight: 'bold',
                     color: 'white',
                     marginBottom: '32px',
-                    letterSpacing: '-0.02em'
+                    letterSpacing: '-0.02em',
+                    paddingTop: '24px'
                 }}>
                     Sonora Music
                 </h1>
@@ -99,7 +100,7 @@ function App() {
             </div>
 
             {/* Info Section */}
-            <div style={{
+            <div id="why-sonora" style={{
                 position: 'relative',
                 zIndex: 1,
                 padding: '96px 24px',
@@ -120,83 +121,104 @@ function App() {
                     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                     gap: '24px'
                 }}>
-                    <div style={{
-                        backgroundColor: 'rgba(255,255,255,0.05)',
-                        backdropFilter: 'blur(10px)',
-                        borderRadius: '16px',
-                        padding: '20px',
-                        paddingBottom: '32px',
-                        border: '1px solid rgba(255,255,255,0.1)'
-                    }}>
-                        <div style={{ color: '#cba6f7', marginBottom: '16px'}}>
-                            <Cpu size={32} />
-                        </div>
-
-                        <h3 style={{
-                            fontSize: '24px',
-                            fontWeight: '600',
-                            color: 'white',
-                            marginBottom: '12px'
+                    <AnimatedContent
+                        direction="vertical"
+                        distance={30}
+                        duration={0.8}
+                        delay={0}
+                    >
+                        <div style={{
+                            backgroundColor: 'rgba(255,255,255,0.05)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            padding: '20px',
+                            paddingBottom: '32px',
+                            border: '1px solid rgba(255,255,255,0.1)'
                         }}>
-                            Simple & Native
-                        </h3>
-                        <p style={{ color: '#d1d5db', lineHeight: 1.6 }}>
-                            Built with Tauri for a truly native macOS experience without the bloat of Electron.
-                        </p>
-                    </div>
+                            <div style={{ color: '#cba6f7', marginBottom: '16px'}}>
+                                <Cpu size={32} />
+                            </div>
 
-                    <div style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.05',
-                        backdropFilter: 'blur(10px)',
-                        borderRadius: '16px',
-                        padding: '20px',
-                        paddingBottom: '32px',
-                        border: '1px solid rgba(255,255,255,0.1)'
-                    }}>
-                        <div style={{ color: '#cba6f7', marginBottom: '16px'}}>
-                            <Zap size={32} />
+                            <h3 style={{
+                                fontSize: '24px',
+                                fontWeight: '600',
+                                color: 'white',
+                                marginBottom: '12px'
+                            }}>
+                                Simple & Native
+                            </h3>
+                            <p style={{ color: '#d1d5db', lineHeight: 1.6 }}>
+                                Built with Tauri for a truly native macOS experience without the bloat of Electron.
+                                It is optimised to be lightweight and space-efficient.
+                            </p>
                         </div>
+                    </AnimatedContent>
 
-
-                        <h3 style={{
-                            fontSize: '24px',
-                            fontWeight: '600',
-                            color: 'white',
-                            marginBottom: '12px'
+                    <AnimatedContent
+                        direction="vertical"
+                        distance={30}
+                        duration={0.8}
+                        delay={0.1}
+                    >
+                        <div style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            padding: '20px',
+                            paddingBottom: '32px',
+                            border: '1px solid rgba(255,255,255,0.1)'
                         }}>
-                            Lightning Fast and Lightweight
-                        </h3>
-                        <p style={{ color: '#d1d5db', lineHeight: 1.6 }}>
-                            I built Sonora to be extremely fast and lightweight. It uses Apple's own AVFoundation framework
-                            to handle audio playback, for minimal overhead and optimal performance.
-                        </p>
-                    </div>
+                            <div style={{ color: '#cba6f7', marginBottom: '16px'}}>
+                                <Zap size={32} />
+                            </div>
 
-                    <div style={{
-                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
-                        backdropFilter: 'blur(10px)',
-                        borderRadius: '16px',
-                        padding: '20px',
-                        paddingBottom: '32px',
-                        border: '1px solid rgba(255, 255, 255, 0.1)'
-                    }}>
-                        <div style={{ color: '#cba6f7', marginBottom: '16px'}}>
-                            <Lock size={32} />
+                            <h3 style={{
+                                fontSize: '24px',
+                                fontWeight: '600',
+                                color: 'white',
+                                marginBottom: '12px'
+                            }}>
+                                Lightning Fast and Lightweight
+                            </h3>
+                            <p style={{ color: '#d1d5db', lineHeight: 1.6 }}>
+                                I built Sonora to be extremely fast and lightweight. It uses Apple's own AVFoundation framework
+                                to handle audio playback, for minimal overhead and optimal performance.
+                            </p>
                         </div>
+                    </AnimatedContent>
 
-                        <h3 style={{
-                            fontSize: '24px',
-                            fontWeight: '600',
-                            color: 'white',
-                            marginBottom: '12px'
+                    <AnimatedContent
+                        direction="vertical"
+                        distance={30}
+                        duration={0.8}
+                        delay={0.2}
+                    >
+                        <div style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                            backdropFilter: 'blur(10px)',
+                            borderRadius: '16px',
+                            padding: '20px',
+                            paddingBottom: '32px',
+                            border: '1px solid rgba(255, 255, 255, 0.1)'
                         }}>
-                        Local Only Application
-                        </h3>
-                        <p style={{ color: '#d1d5db', lineHeight: 1.6 }}>
-                            No cloud sync or accounts involved. Just drag in local music files and you are good to go!
-                        </p>
+                            <div style={{ color: '#cba6f7', marginBottom: '16px'}}>
+                                <Lock size={32} />
+                            </div>
 
-                    </div>
+                            <h3 style={{
+                                fontSize: '24px',
+                                fontWeight: '600',
+                                color: 'white',
+                                marginBottom: '12px'
+                            }}>
+                                Local Only Application
+                            </h3>
+                            <p style={{ color: '#d1d5db', lineHeight: 1.6 }}>
+                                No cloud sync or accounts involved. Just drag in local music files and you are good to go!
+                                The UI is similar to Apple Music or Spotify, but without the requirement for internet or subscriptions.
+                            </p>
+                        </div>
+                    </AnimatedContent>
                 </div>
             </div>
         </div>
