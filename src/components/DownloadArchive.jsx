@@ -80,6 +80,7 @@ function DownloadArchive() {
                 fontSize: '48px',
                 fontWeight: 'bold',
                 marginBottom: '32px',
+                paddingBottom: '32px',
                 textAlign: 'center'
             }}>
                 Download Archive
