@@ -11,7 +11,7 @@ const releases = [
         description: 'Initial release with core features'
     },
     {
-        version: 'V1.1.0',
+        version: 'V1.1.0 - Latest',
         date: '2026-07-5',
         url: 'https://github.com/TheApparition1/Sonora-Music/releases/download/V1.0.1/Sonora.Music.-.1.1.0.dmg',
         filename: 'Sonora.1.0.1.-.Apple.Silicon.dmg',
