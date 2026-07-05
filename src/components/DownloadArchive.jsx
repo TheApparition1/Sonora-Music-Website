@@ -1,19 +1,29 @@
-import { Download, Calendar, Tag } from 'lucide-react';
+import { Download, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SoftAurora from './SoftAurora';
 
 const releases = [
     {
         version: 'V1.0.0',
-        date: '2024-01-15',
+        date: '2026-07-3',
         url: 'https://github.com/TheApparition1/Sonora-Music/releases/download/V1.0.0/Sonora.1.0.-.Apple.Silicon.dmg',
         filename: 'Sonora.1.0.-.Apple.Silicon.dmg',
         description: 'Initial release with core features'
     },
-    // Add more releases here as you create them
+    {
+        version: 'V1.0.1',
+        date: '2026-07-5',
+        url: 'https://github.com/TheApparition1/Sonora-Music/releases/download/V1.0.1/Sonora.1.0.1.-.Apple.Silicon.dmg',
+        filename: 'Sonora.1.0.1.-.Apple.Silicon.dmg',
+        description: 'Added shuffle, repeat modes and custom logo. '
+    }
 ];
 
 function DownloadArchive() {
+    const sortedReleases = [...releases].sort((a, b) => {
+        return new Date(b.date) - new Date(a.date);
+    });
+
     return (
         <div style={{position: 'relative', minHeight: '100vh', overflow: 'hidden'}}>
             {/* Solid background color */}
@@ -76,7 +86,7 @@ function DownloadArchive() {
             </h1>
             
             <div style={{maxWidth: '800px', margin: '0 auto'}}>
-                {releases.map((release) => (
+                {sortedReleases.map((release) => (
                     <div key={release.version} style={{
                         backgroundColor: 'rgba(255,255,255,0.05)',
                         backdropFilter: 'blur(10px)',
