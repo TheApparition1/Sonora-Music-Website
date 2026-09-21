@@ -12,11 +12,18 @@ const releases = [
         description: 'Initial release with core features'
     },
     {
-        version: 'V1.1.0 - Latest',
+        version: 'V1.1.0',
         date: '2026-07-5',
         url: 'https://github.com/TheApparition1/Sonora-Music/releases/download/V1.0.1/Sonora.Music.-.1.1.0.dmg',
         filename: 'Sonora.1.0.1.-.Apple.Silicon.dmg',
         description: 'Added shuffle, repeat modes and custom logo. '
+    },
+    {
+        version: 'V1.1.1',
+        date: "2026-09-21",
+        url: 'https://github.com/TheApparition1/Sonora-Music/releases/download/v1.1.1/SonoraMusic-v1.1.1.zip',
+        filename: 'Sonora Music - v1.1.1.zip',
+        description: 'Fixed an audio bug, added a queue function, and added support for custom colors. Note: this release comes with 2 songs to test the app.'
     }
 ];
 
@@ -71,7 +78,6 @@ function DownloadArchive() {
             }}/>
 
             <div style={{
-                position: 'relative',
                 zIndex: 1,
                 minHeight: '100vh',
                 padding: '24px',
@@ -82,7 +88,7 @@ function DownloadArchive() {
                 fontWeight: 'bold',
                 marginBottom: '32px',
                 paddingBottom: '32px',
-                textAlign: 'center'
+                textAlign: 'center',
             }}>
                 Download Archive
             </h1>
