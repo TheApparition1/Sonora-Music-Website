@@ -18,7 +18,7 @@
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;
-  color: var(--text);
+  color: white;
   background: var(--bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -76,7 +76,7 @@ h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
-  color: var(--text-h);
+  color: white;
 }
 
 h1 {

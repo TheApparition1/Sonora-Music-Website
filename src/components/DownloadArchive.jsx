@@ -71,7 +71,7 @@ function DownloadArchive() {
                 width: '100%',
                 height: '100%',
                 backdropFilter: 'blur(75px)',
-                webkitBackdropFilter: 'blur(75px)',
+                WebkitBackdropFilter: 'blur(75px)',
                 zIndex: 0,
                 pointerEvents: 'none',
                 background: 'transparent',
@@ -89,6 +89,7 @@ function DownloadArchive() {
                 marginBottom: '32px',
                 paddingBottom: '32px',
                 textAlign: 'center',
+                color: 'white !important'
             }}>
                 Download Archive
             </h1>
